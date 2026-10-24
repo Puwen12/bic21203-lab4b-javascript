@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSON Data Display</h2>
+
+<p id="first-book-title"></p>
+<p id="second-book-author"></p>
+<div id="genres-output"></div>
+<p id="error-message" style="color: red; font-weight: bold;"></p>
+
+<script>
+async function loadBooksData() {
+  try {
+    const response = await fetch("books.json");
+    
+    if (!response.ok) {
+      throw new Error("Could not load the file. Make sure you are running a local server.");
+    }
+    const data = await response.json();
+    document.getElementById("first-book-title").textContent = data.books[0].title;
+    document.getElementById("second-book-author").textContent = data.books[1].author;
+    const genresContainer = document.getElementById("genres-output");
+    
+    data.books.forEach(book => {
+      const para = document.createElement("p");
+      para.textContent = book.title + " — " + book.genres.join(", ");
+      genresContainer.appendChild(para);
+    });
+    
+  } catch (error) {
+    document.getElementById("error-message").textContent = "Error: " + error.message;
+  }
+}
+
+loadBooksData();
+</script>
+
+</body>
+</html>
