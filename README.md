@@ -13,6 +13,6 @@ To run this project correctly, you must use a local development server because `
 5. Navigate to `jquery-dom.html` to view the jQuery DOM manipulations.
 
 ## Output Screenshots
-![Question 1 - JSON File](Screenshot 2026-10-25 062547.png)
-![Question 2 - JSON Data Display](Screenshot 2026-10-25 062832.png)
-![Question 3 - jQuery DOM](Screenshot 2026-10-25 062937.png)
+###[Question 1 - JSON File](Screenshot 2026-10-25 062547.png)
+###[Question 2 - JSON Data Display](Screenshot 2026-10-25 062832.png)
+###[Question 3 - jQuery DOM](Screenshot 2026-10-25 062937.png)
